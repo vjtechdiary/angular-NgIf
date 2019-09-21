@@ -1,0 +1,66 @@
+<div>
+  <h4>Part-1</h4>
+</div>
+
+
+<div *ngIf="true">
+  Expression is true and ngIf is true.
+  This div is in the DOM.
+</div>
+<div *ngIf="false">
+  Expression is false and ngIf is false.
+  This div is not in the DOM.
+</div>
+
+
+<div>
+  <h4>Part-2</h4>
+</div>
+
+
+<!-- Simple Condition based on the flag variables -->
+<!-- Here titleFlag is true & userFlag is false so First div will be in the DOM -->
+<div *ngIf="titleFlag">Title of the application: {{ title}} </div>
+
+<div *ngIf="userFlag"> Application created by User:  {{userName}} </div>
+
+<!-- Invert Condition based on the flag variables -->
+<!-- Here titleFlag is true & userFlag is false but because of invert condition Second Div will be in the DOM -->
+
+<div *ngIf="!titleFlag">Title of the application: {{ title}} </div>
+
+<div *ngIf="!userFlag"> Application created by User:  {{userName}} </div>
+
+
+
+<div>
+  <h4>Part-3</h4>
+</div>
+
+<!-- If Else, Here Else part is <ng-template> -->
+<!-- In this case titleFlag is true so else part will not execute -->
+<div *ngIf="titleFlag; else elseTitleBlock">Title of the application: {{ title}} </div>
+<ng-template #elseTitleBlock>
+    <div>Title of the application from else part: {{ title}} </div>
+</ng-template>
+
+<!-- In this case userFlag is false, so else part will execute -->
+<div *ngIf="userFlag; else elseUserBlock"> Application created by User:  {{userName}} </div>
+<ng-template #elseUserBlock>
+    <div>Application created by User from else part:  {{userName}}  </div>
+</ng-template>
+
+<!-- In this case titleFlag is true but condition is negate so it becomes false, then else part will execute -->
+<div *ngIf="!titleFlag; else elseBlockforTitle">Title of the application: {{ title}} </div>
+<ng-template #elseBlockforTitle>
+    <div>Title of the application from else part: {{ title}} </div>
+</ng-template>
+
+<!-- In this case userFlag is false but condition is negate so it becomes true, then else part will not execute -->
+<div *ngIf="!userFlag; else elseBlockforUser"> Application created by User:  {{userName}} </div>
+<ng-template #elseBlockforUser>
+    <div>Application created by User from else part:  {{userName}}  </div>
+</ng-template>
+
+
+<router-outlet></router-outlet>
