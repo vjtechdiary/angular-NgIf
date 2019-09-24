@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Tutorial 
 
-Read tutorial [Structural Directive:(NgIf - Conditional Statement)](https://vjtechdiary.blogspot.com/2019/09/structural-directive-ngif-conditional.html) on [VJ Tech Diary](https://vjtechdiary.blogspot.com). 
+Read tutorial [Structural Directive:(NgIf - Conditional Statement)](https://vjtechworld.com/2019/09/structural-directive-ngif-conditional.html) on [VJ Tech Diary](https://vjtechworld.com). 
 
 ## Install Dependencies
 
